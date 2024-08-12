@@ -24,6 +24,12 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_BEDROCKIUM = ITEMS.register("raw_bedrockium",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> RED_ALLOY_INGOT = ITEMS.register("red_alloy_ingot",
+            ()-> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> DARK_MATTER = ITEMS.register("dark_matter",
+            ()-> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus)
     {
