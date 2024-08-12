@@ -61,6 +61,8 @@ public class TutorialMod
         {
             event.accept(ModItems.BISMUTH);
             event.accept(ModItems.RAW_BISMUTH);
+            event.accept(ModItems.BEDROCKIUM);
+            event.accept(ModItems.RAW_BEDROCKIUM);
         }
     }
 
