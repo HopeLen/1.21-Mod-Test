@@ -1,5 +1,6 @@
 package net.hopelen.tutorialmod;
 
+import net.hopelen.tutorialmod.block.ModBlocks;
 import net.hopelen.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -40,7 +41,12 @@ public class TutorialMod
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -66,6 +72,16 @@ public class TutorialMod
             event.accept(ModItems.RED_ALLOY_INGOT);
             event.accept(ModItems.DARK_MATTER);
         }
+
+
+        if(event.getTabKey()==CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(ModBlocks.BISMUTH_BLOCK);
+            event.accept((ModBlocks.BISMUTH_ORE));
+        }
+
+
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
